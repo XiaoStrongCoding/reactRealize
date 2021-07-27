@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='./fiber.js'></script>
+    <script src="./element.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id='container'>
+        <p>hello myReact</p>
+    </div>
+    <script type='text/babel'>
+
+        /** @jsx myReact.createElement */
+        const element = (
+            // <div id='foo'>
+            //     <a href='https://www.baidu.com'>白了个度～</a>
+            //     '啦啦啦～～'
+            // </div>
+            <div>
+                <h1>
+                <p />
+                <a />
+                </h1>
+                <h2 />
+            </div>
+        )
+
+        myReact.render(element, document.getElementById('container'))
+    </script>
+</body>
+</html>
