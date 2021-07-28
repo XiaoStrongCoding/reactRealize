@@ -16,18 +16,24 @@
     <script type='text/babel'>
 
         /** @jsx myReact.createElement */
+        function App(props) {
+            return (
+                <div id='foo'>
+                    <a href='https://www.baidu.com'>白了个度～</a>
+                    {props.name}
+                </div>
+            )
+        }
+
         const element = (
-            // <div id='foo'>
-            //     <a href='https://www.baidu.com'>白了个度～</a>
-            //     '啦啦啦～～'
+            <App name='啦啦啦～～'/>
+            // <div>
+            //     <h1>
+            //         <p />
+            //         <a />
+            //     </h1>
+            //     <h2 />
             // </div>
-            <div>
-                <h1>
-                <p />
-                <a />
-                </h1>
-                <h2 />
-            </div>
         )
 
         myReact.render(element, document.getElementById('container'))
